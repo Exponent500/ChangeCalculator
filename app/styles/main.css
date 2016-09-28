@@ -1,0 +1,28 @@
+.container {
+    padding-top: 35px;
+}
+
+/* initially hides the results when HTML page first loads*/
+.initial-hide {
+	display: none;
+}
+
+.dollar-result {
+	background-color: lightgreen;
+}
+
+.quarters-result {
+	background-color: silver ;
+}
+
+.dimes-result {
+	background-color: silver;
+}
+
+.nickels-result {
+	background-color: silver;
+}
+
+.pennies-result {
+	background-color: #cd7f32;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Change Calculator</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+<link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/main.css">
+<!-- endinject -->        
+</head>
+
+<body>
+    <div class=" animated zoomIn container"> <!-- displays body of webpage with Animate zoomIn effect-->
+        <h1 class="text-center" id="header">Change Calculator!</h1>
+
+        <div class="form-container">                         
+            
+            <!-- Sale Price Input Field-->
+            <div class="form-group col-xs-6">
+                <label class="control-label" for="sale-price">Total due</label>
+                <div class="input-group"> <!-- input group along with input-group-addon will add  an icon to the left of an input -->
+                    <span class="input-group-addon">$</span>
+                    <input class="form-control" type="number" id="sale-price" name="sale-price" placeholder="">
+                </div>
+            </div>
+            
+            <!-- Cash given by customer field-->
+            <div class="form-group col-xs-6">
+                <label class="control-label" for="cash-given">Cash given</label>
+                <div class="input-group"> 
+                    <span class="input-group-addon">$</span>
+                    <input class="form-control" type="number" id="cash-given" name="cash-given" placeholder="">
+                </div>
+            </div>
+
+            <!-- Calculate Change Button -->
+            <div class="form-group col-xs-12">
+                <button class="form-control btn btn-primary" type="button" id ="calculate-button" name="calculate-button"><span class="h4">Calculate Change!</span></button>
+            </div>
+
+            
+            <div class="initial-hide"  id="coin-results"> <!-- Initially hides all the info within this div -->
+
+                <!-- Space reserverd for dollars -->
+                <div class="col-xs-12">
+                    <p class="text-center h2">Dollars</p>
+                    <pre class="col-xs-4 col-xs-offset-4 dollar-result">
+                        <p class="text-center h2" id="change-dollars"></p>
+                    </pre>
+                </div>
+
+                <!-- Space reserverd for quarters -->
+                <div class="col-xs-3">    
+                    <p class="text-center h2">Quarters</p>
+                    <pre class="quarters-result">
+                        <p class="text-center h2" id="change-quarters"></p>
+                    </pre>
+                </div>
+                
+                <!-- Space reserved for dimes -->
+                <div class="col-xs-3">
+                    <p class="text-center h2">Dimes</p>
+                    <pre class="dimes-result">
+                        <p class="text-center h2" id="change-dimes"></p>
+                    </pre>
+                </div>
+
+                <!-- Space reserved for nickels -->
+                <div class="col-xs-3">
+                    <p class="text-center h2">Nickels</p>
+                    <pre class="nickels-result">
+                        <p class="text-center h2" id="change-nickels"></p>
+                    </pre>
+                </div>                
+
+                <!-- Space reserved for pennies -->
+                <div class="col-xs-3">
+                    <p class="text-center h2">Pennies</p>
+                    <pre class="pennies-result">
+                        <p class="text-center h2" id="change-pennies"></p>
+                    </pre>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<!-- endinject -->
+</body>
+
+</html>
